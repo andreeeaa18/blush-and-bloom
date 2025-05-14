@@ -1,0 +1,792 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;600&display=swap");
+/* Import font Fira Sans */
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+/* Import font Titillium Web */
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+/* Import font Kalam */
+@import url("https://fonts.cdnfonts.com/css/elegant-2");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 65px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+ul .slick-dots {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox-container {
+  display: none;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin: 10px auto;
+}
+
+.submit-btn {
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    rgb(240, 228, 233) 0%,
+    rgb(190, 157, 170) 51%,
+    rgb(240, 228, 233) 100%
+  );
+  background-size: 200% auto;
+  border-radius: 7px;
+  border: 1px solid #95928e;
+  transition: 0.5s ease;
+  padding: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn:hover,
+.buy-btn:hover {
+  /* Modifică poziția gradientului la hover */
+  background-position: right center;
+}
+
+.form-text {
+  /* Stilizare pentru textul din formulare */
+  color: rgb(130, 72, 105);
+  font-size: large;
+}
+
+.text-white-smoke {
+  /* Stilizare pentru text alb fumuriu */
+  color: mintcream;
+  font-size: 1.03rem;
+}
+
+body {
+  /* Stilizare generală pentru body */
+  font-family: "Fira Sans", sans-serif;
+  background: repeating-linear-gradient(
+    90deg,
+    #ebebe6 0%,
+    #ffd9d9 40%,
+    #ffcfda 60%,
+    #ebebe6 100%
+  );
+  margin: 0 0 0;
+  margin-bottom: 50px;
+}
+
+.body-part {
+  /* Centrăm conținutul și setăm lățimea maximă */
+  margin: auto;
+  margin-top: 100px;
+  max-width: 940px;
+}
+
+.nav-bar {
+  /* Stilizare pentru bara de navigare */
+  background-color: rgb(217, 185, 198);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* z-index: 2; */
+}
+
+.nav-bar-links {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+  font-size: 1.0625rem;
+}
+
+.nav-bar-links__link {
+  font-family: fantasy;
+  color: rgb(130, 72, 105);
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  background-color: mintcream;
+  transition: 0.3s ease;
+  border: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar-links__link:hover {
+  background-color: #7f7265;
+}
+
+.nav-bar__title {
+  width: 400px;
+}
+
+.nav-bar__title a {
+  font-family: "ELEGANT", sans-serif;
+  margin: 0;
+  color: rgb(130, 72, 105);
+  text-decoration: none;
+}
+
+.second-nav-bar {
+  display: none;
+}
+
+.second-nav-bar ul {
+  padding-right: 30px;
+  text-align: right;
+  direction: rtl;
+  list-style-position: inside;
+}
+
+.second-navbar-link {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.second-navbar-link:hover {
+  color: rgb(130, 72, 105);
+}
+
+.menu-toggle {
+  line-height: 1;
+  height: 40px;
+  color: #7f7265;
+  font-size: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+.fs-5 {
+  color: rgb(130, 72, 105);
+  font-family: pacifico;
+  font-style: italic;
+  margin-top: 60px;
+}
+
+.welcome-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.welcome-box {
+  /* Container pentru text și buton în secțiunea de bun venit */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.welcome-box__title {
+  /* Stilizare pentru titlul din secțiunea de bun venit */
+  font-size: 3.125rem;
+  font-weight: 600;
+  color: rgb(130, 72, 105);
+  width: 280px;
+  text-align: center;
+  font-family: pacifico;
+  font-style: italic;
+}
+
+.welcome-box__img {
+  /* Stilizare pentru imaginea din secțiunea de bun venit */
+  box-shadow: 10px 12px 28px #717171, -10px -12px 28px #a6a6a6;
+  border: 1px solid black;
+  width: 300px;
+}
+
+.welcome-box__photo {
+  width: 100%;
+}
+
+.buy-btn {
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    rgb(240, 228, 233) 0%,
+    rgb(190, 157, 170) 51%,
+    rgb(240, 228, 233) 100%
+  );
+  background-size: 200% auto;
+  border-radius: 15px;
+  border: 1px solid #95928e;
+  transition: 0.3s ease;
+  padding: 17px 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* tableinstead of bootstrap!
+.table-container {
+  display: flex;
+} */
+
+/* .table-container__table {
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 100%;
+}
+
+.table-container__table,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid;
+  width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+thead {
+  font-style: italic;
+} */
+
+.store {
+  margin: 10px 0 30px;
+}
+
+.store__anotation {
+  /* Stilizare pentru titlul secțiunii de produse */
+  font-size: 2.5rem;
+  text-align: center;
+  color: rgb(130, 72, 105);
+  font-family: pacifico;
+}
+
+.clothes {
+  /* Listă de produse */
+  height: 280px;
+  width: 100%;
+  /* display: flex; */
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.clothes__clothing-item-img {
+  height: 270px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  border: 1px solid #95928e;
+}
+
+.clothes__img-box {
+  height: 100%;
+  flex-shrink: 1;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+.slick-initialized .slick-slide {
+  /* Stilizare slider */
+  display: flex;
+  justify-content: center;
+}
+
+.slick-dotted.slick-slider {
+  /* Stilizare puncte din slider */
+  padding-left: 15px;
+}
+
+.clothes__img-box:hover {
+  /* Mărim imaginea produsului la hover */
+  transform: scale(1.03);
+}
+
+.clothes__img-box:hover .clothes__clothing-item-img {
+  opacity: 0.3;
+}
+
+.clothes__img-box a {
+  /* Ascundem link-ul către produs */
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #95928e;
+  background-image: linear-gradient(
+    to right,
+    rgb(240, 228, 233) 0%,
+    rgb(190, 157, 170) 51%,
+    rgb(240, 228, 233) 100%
+  );
+  background-size: 200% auto;
+  padding: 16px 20px;
+  text-decoration: none;
+  color: whitesmoke !important;
+  font-size: 1.25rem;
+  transition: 0.5s ease;
+}
+
+.clothes__img-box:hover a {
+  /* Afișăm link-ul la hover */
+  opacity: 1;
+}
+
+.clothes__img-box a:hover {
+  background-position: right center;
+}
+
+.clothes__img-box__discount {
+  /* Stilizare eticheta de reducere */
+  position: absolute;
+  background-color: PowderBlue;
+  color: mintcream;
+  border: 1px solid #95928e;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 220px;
+  text-align: center;
+  transform: rotate(45deg);
+  top: 20px;
+  right: -75px;
+  z-index: 1;
+}
+
+.all-items-link {
+  /* Stilizare linkuri a tuturor elementelor */
+  display: flex;
+  justify-content: center;
+  font-size: large;
+}
+
+.all-items-link a {
+  color: black;
+  transition: 0.3s ease;
+}
+
+.all-items-link a:hover {
+  color: rgb(112, 112, 112);
+}
+
+.all-items-link a:hover::after {
+  content: "»";
+}
+
+/* instead of bootstrap!
+.video-container {
+  display: flex;
+} */
+
+video {
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 100%;
+}
+
+.contacts-box {
+  /* Container pentru contact */
+  background-color: rgb(217, 185, 198);
+  border: 1px solid #c0b8ab;
+  border-radius: 5px;
+  height: auto;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.footer-fieldset {
+  /* Stilizare secțiunea de footer */
+  display: flex;
+  flex-direction: column;
+  width: 32vw;
+}
+
+.contacts-box__title {
+  padding: 10px 30px;
+}
+
+.textarea {
+  border-radius: 9px;
+}
+
+.comment-form-box {
+  /* Stilizare pentru formularul de comentarii */
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.adresses {
+  color: rgb(130, 72, 105);
+}
+
+.add-sm-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-media {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.social-media__img {
+  width: 45px;
+}
+
+.form-text,
+.text-left {
+  font-family: "freight-big-pro";
+}
+
+.adresses {
+  width: 200px;
+}
+
+.adresses ul {
+  padding-left: 0;
+}
+
+.description {
+  padding: 1rem;
+  justify-content: center;
+  background-color: rgb(217, 185, 198);
+  border: 1px solid #c0b8ab;
+  border-radius: 5px;
+  height: auto;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: gainsboro;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.description__container {
+  width: 25%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.description__container p {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: mintcream;
+}
+
+.map__container {
+  width: 200%;
+}
+
+.bottom-bar {
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  display: flex;
+}
+
+.bottom-bar__title {
+  width: 300px;
+  text-align: center;
+}
+
+.bottom-bar__title a {
+  font: italic small-caps bold 40px/2 cursive;
+  color: rgb(130, 72, 105);
+  text-decoration: none;
+}
+
+.copyrights {
+  /* Stilizare drepturi de autor */
+  width: 300px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  color: rgb(130, 72, 105);
+}
+
+.copyrights a {
+  text-decoration: none;
+  color: rgb(130, 72, 105);
+}
+
+.phone {
+  /* Stilizare telefon */
+  width: 300px;
+  text-align: end;
+  color: rgb(130, 72, 105);
+}
+
+.profile {
+  position: absolute;
+  top: 80px;
+  right: 24px;
+  background-color: rgb(240, 174, 193);
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#cart-link {
+  position: relative;
+}
+
+.profile-info {
+  position: fixed;
+  top: 74px;
+  right: 47px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-top: -1px;
+  min-width: 200px;
+  font-family: "Raleway", sans-serif;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  z-index: 99;
+}
+
+#log-out-btn {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(130, 72, 105);
+  background-size: 200% auto;
+  border-radius: 15px;
+  border: 1px solid #95928e;
+  transition: 0.3s ease;
+  padding: 1px 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+#empty-profile {
+  font-family: "Raleway", sans-serif;
+}
+
+.profile-info p {
+  margin: 8px 0;
+  color: #666;
+}
+/* Responsivitate */
+@media screen and (max-width: 830px) {
+  .nav-bar-links__link {
+    /* Stilizare pentru link-urile de navigare pe ecrane mici */
+    display: flex;
+    align-items: center;
+  }
+
+  .clothes {
+    /* Realiniem produsele pe ecrane mici */
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .clothes__clothing-item-img {
+    height: 280px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid #95928e;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  main,
+  .map,
+  #about,
+  #contacts,
+  .bottom-bar {
+    padding: 0 10px;
+  }
+
+  q {
+    text-align: center;
+  }
+
+  .welcome-content {
+    /* Flexibilitate pentru secțiunea de bun venit */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .welcome-box {
+    margin: 20px auto 25px;
+  }
+
+  .welcome-box__img {
+    width: 50%;
+  }
+
+  .welcome-box__title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(130, 72, 105);
+    width: auto;
+    text-align: center;
+  }
+
+  .clothes {
+    height: auto;
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .clothes__img-box {
+    width: 180px;
+    height: 250px;
+    flex-shrink: 1;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s ease;
+  }
+
+  .clothes__clothing-item-img {
+    height: 250px;
+    width: 180px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid #95928e;
+  }
+
+  .description {
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .description__container {
+    width: 80%;
+  }
+
+  .contacts-box {
+    height: auto;
+  }
+
+  .comment-form-box {
+    width: 100%;
+    padding: 0%;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .footer-form {
+    width: 80%;
+  }
+
+  .footer-fieldset {
+    width: 100%;
+  }
+
+  .adresses {
+    width: 120%;
+  }
+
+  .social-media {
+    width: 120%;
+  }
+  /* 
+  .item-1,
+  .item-2,
+  .item-3 {
+    object-fit: cover;
+  } */
+
+  .checkbox-container {
+    /* Afișăm containerul checkbox pe mobil */
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .burger {
+    transition: 0.5s ease;
+  }
+
+  /* .burger:hover {
+    transform: rotate(90deg);
+  } */
+
+  .second-nav-bar {
+    background-color: rgb(217, 185, 198);
+    position: fixed;
+    top: -150px;
+    right: 0;
+    width: 100%;
+    height: 140px;
+    transition: 1s;
+    display: block;
+    opacity: 0;
+    z-index: 300;
+    padding: 15px 0;
+  }
+
+  .social-media {
+    width: 100%;
+  }
+
+  .bottom-bar {
+    margin: 0;
+    width: 100%;
+  }
+
+  .copyrights {
+    font-size: 0.8rem;
+  }
+
+  .phone {
+    font-size: 0.8rem;
+  }
+
+  #check {
+    display: none;
+  }
+
+  #check:checked ~ .second-nav-bar {
+    top: 78px;
+    opacity: 1;
+  }
+  /* 
+  .second-nav-bar:hover {
+    top: 50px;
+    opacity: 1;
+  } */
+
+  .nav-bar__title {
+    width: auto;
+  }
+
+  .nav-bar-links {
+    display: none;
+  }
+
+  .profile-info {
+    right: 150px;
+  }
+}

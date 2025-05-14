@@ -1,0 +1,255 @@
+@import url("https://fonts.cdnfonts.com/css/elegant-2");
+
+html {
+  height: 100%;
+}
+
+body {
+  margin-top: 8em;
+  overflow: hidden;
+}
+#div-form {
+  font-family: "ELEGANT", sans-serif;
+  text-align: center;
+  color: #161717;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  animation-name: welcome;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.05, 1.04, 1, 0.98);
+  animation-fill-mode: forwards;
+  position: relative;
+  font-size: xx-large;
+  margin-left: 150px; /* Adjusted from 100px to move closer to pic */
+  margin-right: 10px;
+}
+#welcome-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  animation-name: pic;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.05, 1.04, 1, 0.98);
+  animation-fill-mode: forwards;
+  position: relative;
+  width: 350px;
+  height: auto;
+  margin-top: -115px;
+  margin-left: 150px;
+  margin-right: auto;
+}
+
+.form-title {
+  text-align: center;
+  color: #161717;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 10px;
+  -webkit-animation-name: title;
+  animation-name: title;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.05, 1.04, 1, 0.98);
+  animation-timing-function: cubic-bezier(0.05, 1.04, 1, 0.98);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+
+@-webkit-keyframes title {
+  /* Definire animație pentru titlu (browser Webkit) */
+  0% {
+    top: -300px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes title {
+  /* Definire animație pentru titlu */
+  0% {
+    top: -300px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.registration-form {
+  /* Stilizare pentru formularul de înregistrare */
+  padding: 0 10px;
+  max-width: 95%;
+  width: 400px;
+  margin: 0 auto;
+  -webkit-animation-name: reg-form;
+  animation-name: reg-form; /* Animare pentru intrarea formularului */
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes reg-form {
+  /* Definire animație pentru formular (browser Webkit) */
+  0% {
+    top: 500px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes reg-form {
+  /* Definire animație pentru formular */
+  0% {
+    top: 500px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+label {
+  /* Stilizare pentru etichete */
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  /* Stilizare pentru câmpurile de input */
+  height: 5vh;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.terms {
+  /* Stilizare pentru secțiunea de termeni și condiții */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.registration-form [type="submit"] {
+  /* Stilizare pentru butonul de trimitere */
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(130, 72, 105);
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+}
+
+.registration-form [type="submit"]:hover {
+  /* Schimbăm stilizarea butonului la hover */
+  border: 1px solid black;
+  background-color: rgb(189, 133, 165);
+  cursor: pointer;
+}
+
+.registration-form .terms input[type="checkbox"] {
+  /* Stilizare pentru checkbox-ul de termeni */
+  margin: 0;
+  width: 3%;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+.registration-form .terms input[type="checkbox"]:hover {
+  /* Schimbă cursorul la hover pe checkbox */
+  cursor: pointer;
+}
+
+p {
+  /* Stilizare pentru paragrafe */
+  margin: 0;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+p a {
+  /* Stilizare pentru link-uri din paragrafe */
+  text-decoration: none;
+}
+p a:visited {
+  /* Stilizare pentru link-urile vizitate */
+  color: purple;
+}
+p a:hover {
+  /* Stilizare pentru link-uri la hover */
+  color: #c34996;
+}
+
+input:invalid:not(:-moz-placeholder-shown) {
+  /* Evidențiem câmpurile invalide în browsere Webkit */
+  border: 2px solid red;
+}
+
+input:invalid:not(:placeholder-shown) {
+  /* Evidențiem câmpurile invalide */
+  border: 2px solid red;
+}
+
+input:valid:focus {
+  /* Evidențiem câmpurile valide la focus */
+  border: 3px solid green;
+}
+
+input:valid {
+  /* Evidențiem câmpurile valide */
+  border: 2px solid green;
+}
+
+input:focus {
+  /* Schimbăm culoarea fundalului câmpului la focus */
+  background-color: #ececec;
+}
+
+/* Add these keyframes for the animations */
+@keyframes welcome {
+  0% {
+    opacity: 0;
+    left: -300px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes pic {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

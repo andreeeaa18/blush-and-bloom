@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blush & Bloom</title>
+    <meta name="author" content="Andreev Andreea" />
+    <meta property="og:title" content="Blush & Bloom" />
+    <meta
+      property="og:description"
+      content="Blush & Bloom: Descoperă cele mai noi rochii pastelate, 
+      pantofi cu toc eleganți și accesorii chic la Blush & Bloom. 
+      Îmbogățește-ți stilul cu selecția noastră de modă feminină, 
+      perfectă pentru orice ocazie. Cumpără acum pentru o eleganță 
+      rafinată și o sofisticare modernă! Cu o gamă variată de produse, 
+      o navigare simplificată și funcționalități convenabile, e-shop-ul 
+      nostru este destinația ta ideală pentru toate nevoile tale de shopping."
+    />
+    <meta name="facebook:title" content="Blush & Bloom" />
+    <meta
+      name="facebook:description"
+      content="Blush & Bloom: Descoperă cele mai noi rochii pastelate, 
+      pantofi cu toc eleganți și accesorii chic la Blush & Bloom. 
+      Îmbogățește-ți stilul cu selecția noastră de modă feminină, 
+      perfectă pentru orice ocazie. Cumpără acum pentru o eleganță 
+      rafinată și o sofisticare modernă!"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/dress.svg" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="nav-bar z-2">
+      <h1 class="nav-bar__title mb-0"><a href="#">Blush & Bloom</a></h1>
+      <img src="/assets/img/dress-svgrepo-com.svg" class="logo" alt="logo" />
+      <nav class="nav-bar-links">
+        <a
+          id="register-link"
+          class="nav-bar-links__link"
+          href="/pages/register/register.html"
+          >Înregistrare</a
+        >
+        <a class="nav-bar-links__link fast-transition" href="#products"
+          >Produse</a
+        >
+        <a class="nav-bar-links__link" href="#about">Despre</a>
+        <a class="nav-bar-links__link" href="#contacts">Contacte</a>
+        <button class="nav-bar-links__link profile-link" href="#">
+          <img
+            src="https://www.svgrepo.com/show/316857/profile-simple.svg"
+            alt="profile"
+            style="width: 26px; height: 26px"
+          />
+          <span id="profile" class="cart-counter hidden"></span>
+        </button>
+      </nav>
+      <div class="checkbox-container">
+        <input type="checkbox" id="check" />
+        <label class="menu-toggle" for="check"
+          ><i class="fa-solid fa-bars burger"></i
+        ></label>
+
+        <nav class="second-nav-bar">
+          <ul class="d-flex flex-column">
+            <li id="second-register-link">
+              <a class="second-navbar-link" href="/pages/register.html"
+                >Înregistare</a
+              >
+            </li>
+            <li><a class="second-navbar-link" href="#about">Despre</a></li>
+            <li><a class="second-navbar-link" href="#products">Produse</a></li>
+            <li><a class="second-navbar-link" href="#contacts">Contacte</a></li>
+            <li>
+              <button class="second-navbar-link profile-link">Profil</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="profile-div"></div>
+
+    <div class="body-part">
+      <main class="mb-5">
+        <div class="d-flex justify-content-center mb-4">
+          <p class="fs-5 text-center">
+            Descoperă o lume de produse la îndemâna ta și bucură-te de plăcerea
+            cumpărăturilor online.
+          </p>
+        </div>
+        <div class="welcome-content">
+          <div class="d-flex welcome-box__img">
+            <img
+              class="welcome-box__photo"
+              src="/assets/img/models1.png"
+              alt=""
+            />
+          </div>
+          <div class="welcome-box">
+            <div class="welcome-box__title d-flex">
+              Frumusețe în fiecare detaliu
+            </div>
+            <a class="buy-btn" href="/pages/products/products.html"
+              >Explorează</a
+            >
+          </div>
+          <div class="d-flex welcome-box__img">
+            <img
+              class="welcome-box__photo"
+              src="/assets/img/models2.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <section id="products" class="products" style="scroll-margin: 50px">
+          <div class="store">
+            <div class="store__anotation">PRODUSE DE TOP</div>
+            <div class="horizontal-line"></div>
+            <ul class="clothes z-1 slider">
+              <li class="clothes__img-box">
+                <img
+                  class="clothes__clothing-item-img item-1"
+                  src="/assets/img/shoes.png"
+                  alt="tshirt"
+                />
+
+                <a
+                  style="width: 120px"
+                  target="_blank"
+                  href="/pages/products/products.html#shoes"
+                  >Vezi produsul!</a
+                >
+              </li>
+              <li class="clothes__img-box">
+                <div class="position-relative overflow-hidden">
+                  <img
+                    class="clothes__clothing-item-img item-2"
+                    src="/assets/img/bag.png"
+                    alt="bag"
+                  />
+                  <a
+                    style="width: 120px"
+                    target="_blank"
+                    href="/pages/products/products.html#bag"
+                  >
+                    Vezi produsul!
+                  </a>
+                  <div class="clothes__img-box__discount">SALES</div>
+                </div>
+              </li>
+              <li class="clothes__img-box">
+                <img
+                  class="clothes__clothing-item-img item-3"
+                  src="/assets/img/white_dress.png"
+                  alt="dress"
+                />
+                <a
+                  style="width: 120px"
+                  target="_blank"
+                  href="/pages/products/products.html#white-dress"
+                  >Vezi produsul!</a
+                >
+              </li>
+              <li class="clothes__img-box">
+                <img
+                  class="clothes__clothing-item-img item-3"
+                  src="/assets/img/earrings.png"
+                  alt="earrings"
+                />
+                <a
+                  style="width: 120px"
+                  target="_blank"
+                  href="/pages/products/products.html#earrings"
+                  >Vezi produsul!</a
+                >
+              </li>
+            </ul>
+            <div class="all-items-link">
+              <a href="/pages/products/products.html">VEZI TOATE PRODUSELE</a>
+            </div>
+          </div>
+        </section>
+        <div class="video-container d-flex">
+          <video
+            controls
+            src="/assets/videos/louisvuitton.mp4"
+            type="video/mp4"
+          >
+            Sorry your browser doesnt support the video, please
+            <a
+              href="https://www.youtube.com/watch?v=O1PiTXZlEz0"
+              target="_blank"
+              >download it</a
+            >
+          </video>
+        </div>
+      </main>
+      <footer>
+        <section class="mb-5" id="about" style="scroll-margin: 50px">
+          <div class="description">
+            <div class="description__container">
+              <p>Despre noi.</p>
+              <span class="text-white-smoke"
+                ><strong>Blush & Bloom</strong> este o platformă e-commerce de
+                ultimă generație, creată pentru a revoluționa experiența ta de
+                cumpărături.</span
+              >
+            </div>
+            <div class="description__container">
+              <p>Worldwide.</p>
+              <span class="text-white-smoke"
+                >Cu o gamă variată de produse, navigare intuitivă și
+                funcționalități convenabile, e-shop-ul nostru este destinația ta
+                ideală pentru toate nevoile de cumpărături.</span
+              >
+            </div>
+            <div class="description__container">
+              <p>Inovație.</p>
+              <span class="text-white-smoke"
+                >Bine ai venit în e-shop-ul nostru, unde cumpărăturile se îmbină
+                cu confortul și posibilitățile nelimitate.</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-5" id="contacts" style="scroll-margin: 50px">
+          <div class="contacts-box">
+            <div class="fs-5 contacts-box__title">
+              Pentru orice întrebări, te rugăm să ne contactezi sau să ne
+              găsești aici:
+            </div>
+            <div class="comment-form-box">
+              <form action="" class="footer-form">
+                <fieldset class="footer-fieldset m-0 p-0">
+                  <textarea
+                    class="textarea mb-4"
+                    name="message"
+                    id="message"
+                    rows="4"
+                    placeholder="Lasă un comentariu..."
+                  ></textarea>
+                  <label for="rating">Cum ai evalua magazinul nostru?</label>
+                  <select class="mb-4" name="rating" id="rating">
+                    <option value="Excellent">Excelent</option>
+                    <option value="Good">Bun</option>
+                    <option value="Average">Mediu</option>
+                    <option value="Fair">Satisfăcător</option>
+                    <option value="Poor">Slab</option>
+                  </select>
+                  <button class="submit-btn" type="submit">Trimite</button>
+                  <p id="form-output"></p>
+                </fieldset>
+              </form>
+              <div class="add-sm-box">
+                <div class="adresses">
+                  <h5 class="text-left">Adresele noastre:</h5>
+                  <ul type="circle">
+                    <li>
+                      <h4 class="form-text">Chișinău</h4>
+                      <p class="form-text">Veronica Micle 9</p>
+                    </li>
+                    <li>
+                      <h4 class="form-text">București</h4>
+                      <p class="form-text">Strada Mihai Viteazul 11/1</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="social-media">
+                  <a href="https://www.facebook.com" target="_blank"
+                    ><img
+                      class="social-media__img"
+                      src="/assets/img/facebook.svg"
+                      alt="facebook"
+                  /></a>
+                  <a href="https://www.whatsapp.com/?lang=en" target="_blank"
+                    ><img
+                      class="social-media__img"
+                      src="/assets/img/whatsapp.svg"
+                      alt="whatsapp"
+                  /></a>
+                  <a href="https://www.instagram.com/" target="_blank"
+                    ><img
+                      class="social-media__img"
+                      src="/assets/img/instagram.svg"
+                      alt="instagram"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="map mb-5">
+          <div
+            class="map__container"
+            style="max-width: 940px; width: 100%; margin: 0 auto"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10880.089605483496!2d28.8356411!3d47.0201653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c304dfb4d47%3A0x28d317f7b7c3e9b5!2sMalliny%20MLN!5e0!3m2!1sen!2s!4v1729319216922!5m2!1sen!2s"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+      </footer>
+    </div>
+
+    <section class="bottom-bar">
+      <div class="copyrights">
+        &copy; 2025 E-Shop. All rights reserved.
+        <span class="material-icons"> admin_panel_settings </span>
+      </div>
+      <div>
+        <h1 class="bottom-bar__title mb-0"><a href="#">Blush & Bloom</a></h1>
+      </div>
+      <div class="phone">Telefon: +(373)000 - XXX - 777</div>
+    </section>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

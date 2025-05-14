@@ -1,0 +1,654 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;600&display=swap");
+/* Importăm fontul "Fira Sans" pentru utilizare în elementele text */
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+/* Importăm fontul "Titillium Web" pentru utilizare în titluri și alte elemente specifice */
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+/* Importăm fontul "Kalam" pentru utilizare creativă */
+@import url("https://fonts.cdnfonts.com/css/elegant-2");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  /* Setăm fontul general al paginii și culoarea de fundal */
+  font-family: "Fira Sans", sans-serif;
+  background-color: mintcream !important;
+  margin-bottom: 50px !important;
+}
+
+.horizontal-line {
+  /* Linie de separare utilizată în secțiuni */
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin: 10px auto;
+}
+
+.buy-btn-prod p {
+  /* Stilizare pentru butoanele de cumpărare */
+  font-family: "Fira Sans", sans-serif;
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    rgb(240, 228, 233) 0%,
+    rgb(190, 157, 170) 51%,
+    rgb(240, 228, 233) 100%
+  );
+  background-size: 200% auto;
+  border-radius: 15px;
+  border: 1px solid #95928e;
+  transition: 0.3s ease;
+  padding: 17px 40px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.buy-btn-prod p:hover {
+  /* Schimbăm poziția gradientului la hover */
+  background-position: right center;
+}
+
+.buy-btn-prod {
+  /* Adaugăm o tranziție pentru întregul container */
+  transition: 0.5s ease;
+}
+
+.buy-btn-prod:hover {
+  /* Mărim containerul la hover */
+  transform: scale(1.1);
+}
+
+.products-title {
+  /* Stilizare pentru titlul secțiunii de produse */
+  font-family: "Titillium Web", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+  margin-top: 90px;
+}
+
+.nav-bar {
+  /* Stilizare pentru bara de navigare */
+  background-color: rgb(217, 185, 198);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  gap: 15px;
+}
+
+.nav-bar-links__link {
+  /* Stilizare pentru link-urile din navigare */
+  font-family: fantasy;
+  color: rgb(130, 72, 105);
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  background-color: mintcream;
+  transition: 0.3s ease;
+  border: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  width: 500px;
+  gap: 15px;
+  position: relative;
+}
+
+.nav-bar-links__link:hover {
+  /* Schimbăm culoarea fundalului la hover */
+  background-color: #7f7265;
+}
+
+.cart-counter {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 12px;
+  top: -5px;
+  right: -5px;
+  background-color: rgb(130, 72, 105);
+}
+
+#cart-link {
+  position: relative;
+}
+
+.cart-div {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 250px;
+  max-height: 400px;
+  overflow-y: auto;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+  p {
+    font-family: "Raleway", sans-serif;
+  }
+}
+
+.purchase-btn {
+  background-color: rgb(130, 72, 105);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#total-price {
+  margin: 0;
+}
+
+.cart-item {
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+#empty-cart {
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+
+.nav-bar__title {
+  /* Dimensiune fixă pentru titlul din bara de navigare */
+  width: 400px;
+}
+
+.nav-bar__title a {
+  /* Stilizare pentru link-ul din titlul barei de navigare */
+  font-family: "ELEGANT", sans-serif;
+
+  margin: 0;
+  color: rgb(130, 72, 105);
+  text-decoration: none;
+}
+
+.nav-bar-links {
+  /* Container pentru link-urile din bara de navigare */
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-right: 20px;
+  font-size: 1.0625rem;
+}
+
+.second-nav-bar {
+  /* Ascundem bara de navigare secundară */
+  display: none;
+}
+
+.checkbox-container {
+  /* Ascundem checkbox-ul pe ecranele mari */
+  display: none;
+}
+
+.sort-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px auto;
+  width: 80%;
+  position: relative;
+  gap: 15px;
+}
+
+.search-sort-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 80%;
+  margin: 20px auto;
+  position: relative;
+}
+
+.search-wrapper {
+  position: relative;
+  margin-right: 20px; /* Gap between search and sort button */
+  display: flex;
+  align-items: center;
+}
+
+#search-svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 17px;
+  height: 17px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+#filter-input {
+  padding: 8px 12px 8px 40px;
+  border: 2px solid rgb(130, 72, 105);
+  border-radius: 4px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  width: 200px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#filter-input:focus {
+  border-color: rgba(130, 72, 105, 0.8);
+  box-shadow: 0 0 5px rgba(130, 72, 105, 0.3);
+}
+
+#filter-input::placeholder {
+  color: rgba(130, 72, 105, 0.6);
+}
+
+#sort-div {
+  position: absolute;
+  top: 0;
+  right: 80px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 120px;
+  /* max-width: 200px; */
+  z-index: 1;
+}
+
+.sorting-btns {
+  background-color: rgb(130, 72, 105);
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* width: 100%; */
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.sorting-btns:hover {
+  background-color: rgba(130, 72, 105, 0.8);
+  transform: scale(1.02);
+}
+
+.products-title {
+  /* Stilizare suplimentară pentru titlul produselor */
+  color: rgb(130, 72, 105);
+  font-family: fantasy;
+  margin-top: 110px;
+}
+
+.products {
+  /* Grid pentru afișarea produselor */
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: #eadee5;
+  display: grid;
+  width: 80%;
+  gap: 35px;
+  border-radius: 10px;
+}
+
+.products-styling-title {
+  font-family: "ELEGANT", sans-serif;
+  color: mintcream;
+  font-size: larger;
+}
+
+.products-styling-price {
+  font-family: "ELEGANT", sans-serif;
+  color: mintcream;
+  font-size: larger;
+}
+
+.item {
+  /* Stilizare pentru fiecare element de produs */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  overflow: hidden;
+  background-color: rgb(217, 185, 198);
+  border: 1px solid #c9c5bf;
+  max-height: 500px;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Setare specifică pentru diverse produse */
+.item-1 {
+  grid-column: 1/4;
+  max-height: 500px;
+}
+
+.item-2 {
+  padding: 50px 30px;
+  grid-column: 4/6;
+  max-height: 500px;
+}
+
+.item-3 {
+  grid-column: 1/3;
+  padding: 20px 25px;
+}
+
+.item-4 {
+  grid-column: 3/6;
+}
+
+.item-5 {
+  grid-column: 1/6;
+  background-color: #f4f4f4;
+}
+
+.item-6 {
+  justify-content: center;
+  grid-column: 1/6;
+  width: 100%;
+  height: 200px;
+  gap: 0.8rem;
+  padding: 0 20px;
+}
+
+.item-7 {
+  grid-column: 1/3;
+}
+
+.item-8 {
+  grid-column: 3/6;
+}
+
+.item-9 {
+  border: none;
+  background-color: #eadee5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 1/6;
+  gap: 35px;
+  height: 900px;
+}
+
+.item-10,
+.item-11 {
+  height: 100%;
+  width: 100%;
+}
+
+.photo {
+  /* Sitilizare imagini */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-duffle-bag {
+  top: -350px;
+}
+
+.text {
+  /* Stilizare text */
+  font-family: "Titillium Web", sans-serif;
+  color: whitesmoke;
+  font-size: 20px;
+  border: 1px solid white;
+  padding: 5px;
+  font-size: 1rem;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.bottom-bar {
+  /* Stilizare pentru bara de jos */
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.bottom-bar__title {
+  /* Stilizare pentru textul din bara de jos */
+  width: 300px;
+  text-align: center;
+}
+
+.bottom-bar__title a {
+  /* Stilizare pentru link-ul din bara de jos */
+  font: italic small-caps bold 40px/2 cursive;
+  color: rgb(130, 72, 105);
+  text-decoration: none;
+}
+
+.copyrights {
+  /* Stilizare drepturi de autor */
+  width: 300px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  color: rgb(130, 72, 105);
+}
+
+.copyrights a {
+  /* Stilizare link pentru drepturi de autor */
+  text-decoration: none;
+}
+
+.phone {
+  /* Stilizare telefon */
+  width: 300px;
+  text-align: end;
+  color: rgb(130, 72, 105);
+}
+
+#sort-btn {
+  font-family: "Fira Sans", sans-serif;
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    rgb(240, 228, 233) 0%,
+    rgb(190, 157, 170) 51%,
+    rgb(240, 228, 233) 100%
+  );
+  background-size: 200% auto;
+  border-radius: 15px;
+  border: 1px solid #95928e;
+  transition: 0.3s ease;
+  padding: 8px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+#sort-btn:hover {
+  background-position: right center;
+  transform: scale(1.1);
+}
+
+#sort-btn img {
+  width: 26px;
+  height: 26px;
+  transition: 0.3s ease;
+}
+
+@supports not (display: grid) {
+  /* Fallback pentru browsere care nu suportă CSS Grid */
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .item {
+    flex-basis: 48%;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 685px) {
+  /* Stilizare pentru ecrane mici */
+  .products {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .second-nav-bar ul {
+    /* Stilizare bara de navigare */
+    padding-right: 30px;
+    text-align: right;
+    direction: rtl;
+    list-style-position: inside;
+  }
+
+  .second-navbar-link {
+    /* Stilizare link pentru bara de navigare */
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .second-navbar-link:hover {
+    color: rgb(130, 72, 105);
+  }
+
+  .menu-toggle {
+    /* Stilizare meniu toggle */
+    line-height: 1;
+    height: 40px;
+    color: #7f7265;
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+  .buy-btn-prod a {
+    /* Stilizare buton */
+    padding: 10px 15px;
+  }
+
+  .item-1,
+  .item-2,
+  .item-3 {
+    object-fit: cover;
+  }
+
+  .item-9 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo-travis {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .checkbox-container {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .burger {
+    transition: 0.5s ease;
+  }
+
+  /* .burger:hover {
+    transform: rotate(90deg);
+  } */
+
+  .second-nav-bar {
+    background-color: rgb(217, 185, 198);
+    position: fixed;
+    top: -150px;
+    right: 0;
+    width: 100%;
+    height: 140px;
+    transition: 1s;
+    display: block;
+    opacity: 0;
+    z-index: 300;
+    padding: 15px 0;
+  }
+
+  #check {
+    display: none;
+  }
+
+  #check:checked ~ .second-nav-bar {
+    /* Afișare bara secundară când checkbox-ul este activ */
+    top: 63px;
+    opacity: 1;
+  }
+  /* 
+  .second-nav-bar:hover {
+    top: 50px;
+    opacity: 1;
+  } */
+
+  .nav-bar__title {
+    /* Ajustăm titlul pentru ecrane mici */
+    width: auto;
+  }
+
+  .nav-bar-links {
+    display: none;
+  }
+
+  .copyrights {
+    font-size: 0.8rem;
+  }
+  .phone {
+    font-size: 0.8rem;
+  }
+
+  .cart-div {
+    right: 150px;
+  }
+}
