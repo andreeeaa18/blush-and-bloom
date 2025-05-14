@@ -19,7 +19,8 @@ const attachCartButtonListeners = () => {
       e.preventDefault();
       getProducts();
       showCart = true;
-      cartBtns[0]?.click();
+      cartBtns[0].click();
+      // cartBtns.forEach((btn) => btn.click());
 
       cartCounter.textContent = localSaved.count;
       // cartCounter.style.display = "flex";
@@ -32,6 +33,7 @@ const attachCartButtonListeners = () => {
       const productPrice = productContainer.querySelector(
         ".products-styling-price"
       ).textContent;
+      const price = parseFloat(productPrice.replace("$", ""));
 
       // const productContainer = button.closest(".item");
 
@@ -49,7 +51,7 @@ const attachCartButtonListeners = () => {
             ...localSaved.products,
             {
               name: productName,
-              price: productPrice,
+              price: price,
               index: Math.random() * 100,
             },
           ],
@@ -81,6 +83,8 @@ const renderProducts = (localProducts) => {
     if (title) title.textContent = item.title;
     if (description) description.textContent = item.description;
     if (price) price.textContent = `$${item.price}`;
+    console.log(doc.body.innerHTML);
+
     document.querySelector(".products").innerHTML += doc.body.innerHTML;
   });
   attachCartButtonListeners();
@@ -100,8 +104,6 @@ document.querySelector(".menu-toggle").addEventListener("click", () => {
 });
 
 const deleteFunc = (index) => {
-  console.log("clicked");
-
   const filtered = localSaved.products.filter(
     (item) => item.index !== parseFloat(index)
   );
@@ -134,7 +136,7 @@ const renderWishlist = () => {
                 ? product.name.slice(0, 12) + "..."
                 : product.name
             }</p>
-            <p>${product.price}</p>
+            <p>$${product.price}</p>
             <button onclick="deleteFunc(${
               product.index
             })" class="delete-btn" data-index="${product.index}">
@@ -158,13 +160,12 @@ const renderWishlist = () => {
   // });
 
   const totalSum = localSaved.products.reduce((sum, product) => {
-    const price = parseFloat(product.price.replace("$", ""));
-    return sum + price;
+    return sum + product.price;
   }, 0);
 
   if (localSaved.products.length !== 0) {
     displayedCartDiv.innerHTML += `
-  <p id="total-price">Suma totală: ${totalSum}$</p>
+  <p id="total-price">Suma totală: $${totalSum}</p>
   <button class="purchase-btn">Cumpără</button>
 `;
   }
@@ -174,9 +175,11 @@ const renderWishlist = () => {
     purchaseBtn.addEventListener("click", () => {
       alert("Îți mulțumim pentru cumpărătură!");
       localStorage.removeItem("products");
-      displayedCartDiv.innerHTML = "";
-      displayedCartDiv.style.display = "none";
+      // displayedCartDiv.innerHTML = "";
+      // displayedCartDiv.style.display = "none";
       cartCounter.textContent = "0";
+      getProducts();
+      renderWishlist();
     });
   }
 };
@@ -268,6 +271,7 @@ sortHighPrice.addEventListener("click", () => {
 
 filterInput.addEventListener("input", (e) => {
   const search = e.target.value.toLowerCase();
+  console.log(e);
 
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(search)
