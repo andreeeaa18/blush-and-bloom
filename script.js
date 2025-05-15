@@ -39,7 +39,7 @@ submitBtn.addEventListener("click", (e) => {
 });
 
 const goToRegister = () => {
-  window.location.replace("http://127.0.0.1:5500/pages/register/register.html");
+  window.location.replace("/pages/register/register.html");
 };
 
 document.querySelector(".menu-toggle").addEventListener("click", () => {
